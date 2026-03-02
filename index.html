@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fitness coach website home page for Unclouded Fit." />
+  <title>Unclouded Fit | Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Unclouded Fit Home">
+        <img src="images/logo.svg" alt="Unclouded Fit logo" />
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" data-nav data-open="false" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <section class="hero">
+    <div class="container hero-card">
+      <article aria-label="Hero message">
+        <h1>Coaching that fits your life.</h1>
+        <p>
+          Get a training plan you can actually follow — with weekly guidance, clear structure,
+          and progress you can measure.
+        </p>
+        <div class="btn-row" role="group" aria-label="Primary actions">
+          <a class="btn btn-primary" href="services.html">View Programs</a>
+          <a class="btn btn-secondary" href="contact.html">Free Consult</a>
+        </div>
+
+        <section aria-label="Quick highlights" style="margin-top:1.25rem;">
+          <div class="grid grid-3">
+            <div class="card">
+              <h3>Strength</h3>
+              <p>Build muscle and confidence with progressive programming.</p>
+              <div class="meta">3–4 days/week options</div>
+            </div>
+            <div class="card">
+              <h3>Fat Loss</h3>
+              <p>Simple habits + smart training for steady results.</p>
+              <div class="meta">No crash diets</div>
+            </div>
+            <div class="card">
+              <h3>Mobility</h3>
+              <p>Move better and train pain-free with supportive routines.</p>
+              <div class="meta">Warm-up templates</div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <aside class="hero-media" aria-label="Hero graphic">
+        <img src="images/hero.svg" alt="Abstract fitness hero graphic" />
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header>
+        <h2 style="margin:0 0 0.5rem;">How it works</h2>
+        <p style="margin:0; color:#d1d5db; max-width: 70ch;">
+          A clear process helps visitors understand what happens next. This is designed for client approval and visitor confidence.
+        </p>
+      </header>
+
+      <div class="grid grid-3" style="margin-top:1.25rem;">
+        <article class="card">
+          <h3>1) Quick consult</h3>
+          <p>We talk goals, schedule, equipment, and any limitations.</p>
+        </article>
+        <article class="card">
+          <h3>2) Custom plan</h3>
+          <p>You get a weekly plan with tracking and coaching notes.</p>
+        </article>
+        <article class="card">
+          <h3>3) Weekly check-ins</h3>
+          <p>Adjustments based on results, recovery, and feedback.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <section aria-label="Footer summary">
+        <strong style="color:#fff;">Unclouded Fit</strong>
+        <p style="margin:0.35rem 0 0; max-width: 42ch;">
+          Personal training and online coaching designed for sustainable progress.
+        </p>
+      </section>
+
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <aside aria-label="Footer details">
+        <div>Boston, MA (by appointment)</div>
+        <div>© 2026 Unclouded Fit</div>
+      </aside>
+    </div>
+  </footer>
+
+  <script>
+  const btn = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      const isOpen = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!isOpen));
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+</script>
+</body>
+</html>
